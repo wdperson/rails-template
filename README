@@ -1,0 +1,12 @@
+Rails 3 Application Template
+
+--Version
+v 0.0.1 by Mike Riley
+
+--Description
+Application Template for Rails 3.
+
+--Instructions
+
+Use template by running:
+rails new <app name> -m template.rb
