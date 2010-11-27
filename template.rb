@@ -30,8 +30,8 @@ group :cucumber do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'cucumber', '0.7.3'
-  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'cucumber'
+  gem 'rspec-rails'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
 end
@@ -43,7 +43,7 @@ end
 run "bundle install"
 
 #set up cucumber
-run "rails generate cucumber:skeleton --rspec --capybara"
+run "rails g cucumber:install --rspec --capybara"
 
 git :add => '.'
 git :commit => "-a -m 'Initial Commit'"
