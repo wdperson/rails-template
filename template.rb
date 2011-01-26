@@ -20,11 +20,10 @@ END
 git :init
 git :add => '.'
 
-#download jquery.js, raphael.js
+#download jquery.js
 run "curl -s -L http://code.jquery.com/jquery-1.4.4.js > public/javascripts/jquery.js"
-run "curl -s -L http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael.js > public/javascripts/raphael.js"
 
-append_file 'Gemfile' do <<-END
+append_file 'Gemfile', <<-END
 
 group :cucumber do
   gem 'capybara'
@@ -35,10 +34,8 @@ group :cucumber do
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
 end
-
 END
 
-end
 #get the gems installed if they aren't already
 run "bundle install"
 
